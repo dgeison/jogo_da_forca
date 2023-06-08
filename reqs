@@ -1,0 +1,19 @@
+OBJETIVO PRINCIPAL:
+  - permitir que o usuário jogue "Forca" com uma interface de texto.
+
+REQUISITOS:
+  ✅- O usuário poderá selecionar um nível de dificuldade (fácil, médio ou difícil).
+
+  ✅- O usuário pode selecionar uma palavra aleatória de um arquivo de palavras.
+
+  ✅- O tamanho da palavra selecionada varia com o nível de dificuldade selecionado.
+    ✅- fácil: palavras de 3 a 5 letras.
+    ✅- médio: palavras de 6 a 10 letras.
+    ✅- difícil: palavras de 10 ou mais letras.
+
+  ✅- A quantidade de chances que o usuário terá para advinhar uma palavra varia com o nível de dificuldade selecionado.
+    ✅- fácil: QUANTIDADE BÁSICA + 2
+    ✅- médio: QUANTIDADE BÁSICA
+    ✅- difícil: QUANTIDADE BÁSICA - 2
+
+  ✅- QUANTIDADE BÁSICA: duas vezes o tamanho da palavra selecionada.
