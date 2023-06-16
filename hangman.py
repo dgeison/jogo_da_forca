@@ -10,7 +10,6 @@ if __name__ == "__main__":
         selected_word=selected_word, difficulty_level=difficulty_level
     )
 
-
     if player_wins:
         print("Parabéns, você venceu!")
     else:
