@@ -52,25 +52,25 @@ def get_random_word(difficulty_level):
     return selected_word
 
 
-def get_total_attempts(selected_word, difficulty_level):
+def get_total_tries(selected_word, difficulty_level):
     """
     Retorna o total de tentativas que o jogador terá para acertar a palavra.
 
     :param selected_word: palavra selecionada aleatoriamente
     :param difficulty_level: nível de dificuldade selecionado pelo jogador
 
-    :return: total_attempts
+    :return: total_tries
     """
     unique_letters = set(selected_word)
-    total_attempts = 1.5 * len(unique_letters)
+    total_tries = 1.5 * len(unique_letters)
     if difficulty_level == "1":
-        total_attempts += 2
+        total_tries += 2
     elif difficulty_level == "3":
-        total_attempts -= 2
-        total_attempts = min([total_attempts, 18])
+        total_tries -= 2
+        total_tries = min([total_tries, 18])
 
-    total_attempts = round(total_attempts)
-    return total_attempts
+    total_tries = round(total_tries)
+    return total_tries
 
 
 def play_hangman(selected_word, difficulty_level):
@@ -83,14 +83,14 @@ def play_hangman(selected_word, difficulty_level):
     :return: int que se positivo significa que o jogador advinhou a palavra corretamente.
     Caso contrário, o jogador perdeu.
     """
-    total_attempts = get_total_attempts(selected_word, difficulty_level)
-    available_attempts = total_attempts
+    total_tries = get_total_tries(selected_word, difficulty_level)
+    available_attempts = total_tries
     current_state = ["_" for letter in selected_word]
     guessed_letters = []
 
     while "_" in current_state and available_attempts:
         print(
-            f"\n\n### Tentativa número: {total_attempts - available_attempts + 1} de {total_attempts}###"
+            f"\n\n### Tentativa número: {total_tries - available_attempts + 1} de {total_tries}###"
         )
         for char in current_state:
             print(char, end=" ")
